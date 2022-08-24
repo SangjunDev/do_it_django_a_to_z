@@ -64,8 +64,8 @@ class TestView(TestCase):
     
     # 1.1 포스트가 하나 있다.
     post_001 = Post.objects.create(
-      title= '첫 번째 포스트입니다.',
-      content = 'Hello world. we are the world',
+            title='첫 번째 포스트입니다.',
+            content='Hello World. We are the world.',
     )
     
     # 1.2 그 포스트의 url은 '/blog/1/' 이다
