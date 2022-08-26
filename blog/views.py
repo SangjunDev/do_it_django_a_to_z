@@ -64,12 +64,12 @@ class PostCreate(LoginRequiredMixin,UserPassesTestMixin, CreateView):
       
 class PostUpdate(LoginRequiredMixin, UpdateView):
     model = Post
-    fields = ['title', 'hook_text', 'content', 'head_image', 'file_upload', 'category', 'tags']
+    fields = ['title', 'hook_text', 'content', 'head_image', 'file_upload', 'category']
     
     template_name: str = 'blog/post_update_form.html'
     
     def get_context_data(self, **kwargs):
-        context = super(PostUpdate, self).get_context_data()
+        context = super(PostUpdate,self).get_context_data()
         if self.object.tags.exists():
           tags_str_list = list()
           for t in self.object.tags.all():
