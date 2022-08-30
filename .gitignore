@@ -3,3 +3,5 @@ db.sqlite3
 .idea/
 migrations/
 _media/
+.env.prod
+.env.prod.db
